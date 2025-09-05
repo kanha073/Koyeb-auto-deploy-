@@ -3,7 +3,7 @@ name: Auto Redeploy Koyeb Telegram Bot
 on:
   schedule:
     - cron: "0 */12 * * *"   # har 12 ghante baad chalega
-  workflow_dispatch:          # manually run karne ka option bhi hoga
+  workflow_dispatch:
 
 jobs:
   redeploy:
@@ -11,6 +11,5 @@ jobs:
     steps:
       - name: Trigger Koyeb Redeploy
         run: |
-          curl -X POST "https://app.koyeb.com/v1/services/49a1b049/redeploy" \
-          -H "Authorization: Bearer ${{ secrets.KOYEB_API_KEY }}" \
-          -H "Content-Type: application/json"
+          curl -X POST "https://app.koyeb.com/v1/services/scared-freida-filmyflyybot-49a1b049/redeploy" \
+          -H "Authorization: Bearer ${{ secrets.KOYEB_API_KEY }}"
