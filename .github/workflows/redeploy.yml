@@ -11,5 +11,5 @@ jobs:
     steps:
       - name: Trigger Koyeb Redeploy
         run: |
-          curl -X POST "https://app.koyeb.com/v1/services/scared-freida-filmyflyybot-49a1b049/redeploy" \
+          curl -X POST "https://app.koyeb.com/v1/services/95ef06ba-6c31-4674-9e88-d9f7c97cb782/redeploy" \
           -H "Authorization: Bearer ${{ secrets.KOYEB_API_KEY }}"
