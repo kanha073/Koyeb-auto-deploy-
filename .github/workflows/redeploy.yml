@@ -1,0 +1,15 @@
+name: Auto Redeploy Koyeb Telegram Bot
+
+on:
+  schedule:
+    - cron: "0 */12 * * *"   # har 12 ghante baad chalega
+  workflow_dispatch:          # manually run karne ka option bhi hoga
+
+jobs:
+  redeploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Koyeb Redeploy
+        run: |
+          curl -X POST "https://app.koyeb.com/v1/services/49a1b049/redeploy" \
+          -H "Authorization: Bearer ${{ secrets.KOYEB_API_KEY }}"
