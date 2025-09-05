@@ -2,7 +2,7 @@ name: Auto Redeploy Koyeb Telegram Bot
 
 on:
   schedule:
-    - cron: "0 */12 * * *"   # har 12 ghante baad chalega
+    - cron: "0 */12 * * *"
   workflow_dispatch:
 
 jobs:
