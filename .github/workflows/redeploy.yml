@@ -12,4 +12,5 @@ jobs:
       - name: Trigger Koyeb Redeploy
         run: |
           curl -X POST "https://app.koyeb.com/v1/services/49a1b049/redeploy" \
-          -H "Authorization: Bearer ${{ secrets.KOYEB_API_KEY }}"
+          -H "Authorization: Bearer ${{ secrets.KOYEB_API_KEY }}" \
+          -H "Content-Type: application/json"
